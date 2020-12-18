@@ -1,7 +1,8 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.767);
+  color: whitesmoke;
 }
 
 .wrapper {
@@ -29,7 +30,7 @@ body {
 }
 
 .header h1 a {
-  color: limegreen;
+  color: crimson;
   text-decoration: none;
 }
 
@@ -41,11 +42,12 @@ body {
 .btn-link {
   color: tomato;
   padding: 0.5rem;
+  border-radius: 5px;
   text-decoration: none;
 }
 
 .btn-link:hover {
-  background-color: rgba(0, 0, 0, 0.144);
+  background-color: rgba(255, 255, 255, 0.144);
 }
 
 .post-entry {
@@ -68,5 +70,5 @@ body {
 }
 
 .post-entry h2 a:hover {
-  color: limegreen;
+  color: crimson;
 }
