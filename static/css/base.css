@@ -1,23 +1,51 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
+  background-color: whitesmoke;
 }
 
-.nav-left {
-  border-bottom: 1px solid #999;
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(65ch, 100%)
+    1fr;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+.header {
+  border-bottom: 2px solid goldenrod;
   margin-bottom: 2rem;
   display: flex;
   margin-right: auto;
 }
 
-.nav-left h1 a {
-  color: red;
+.header h1 a {
+  color: limegreen;
   text-decoration: none;
 }
 
-.nav-right {
+.new-blog {
   display: flex;
-  padding-top: 2rem;
+  padding: 2rem 0;
+}
+
+.btn-link {
+  color: tomato;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  background-color: rgba(0, 0, 0, 0.144);
 }
 
 .post-entry {
@@ -30,7 +58,7 @@ body {
 
 .post-entry h2 a,
 .post-entry h2 a:visited {
-  color: blue;
+  color: dodgerblue;
   text-decoration: none;
 }
 
@@ -40,5 +68,5 @@ body {
 }
 
 .post-entry h2 a:hover {
-  color: red;
+  color: limegreen;
 }

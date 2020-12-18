@@ -10,17 +10,21 @@
     <title>Django Blog</title>
   </head>
   <body>
-    <header class="nav-left">
-      <h1><a href="{% url 'home' %}">Django blog</a></h1>
-    </header>
+    <div class="wrapper">
+      <header class="header full-bleed">
+        <h1><a href="{% url 'home' %}">Django blog</a></h1>
+      </header>
 
-    <div class="nav-right">
-      <a href="{% url "post_new" %}">+ New Blog Post</a>
-    </div>
+      <main>
+        <div class="new-blog">
+          <a href="{% url "post_new" %}" class="btn-link">New Blog Post</a>
+        </div>
 
-    <div>
-      {% block content %} 
-      {% endblock content %}
+        <div>
+          {% block content %} 
+          {% endblock content %}
+        </div>
+      </main>
     </div>
   </body>
 </html>
