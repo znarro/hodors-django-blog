@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "got";
+  src: local("got"), url("/static/fonts/got.ttf") format("truetype");
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
@@ -11,6 +16,7 @@ body {
     1fr
     min(65ch, 100%)
     1fr;
+  padding: 2rem 3rem;
 }
 
 .wrapper > * {
@@ -30,6 +36,8 @@ body {
 }
 
 .header h1 a {
+  font-family: "got", "Source Sans Pro", sans-serif;
+  letter-spacing: 5px;
   color: crimson;
   text-decoration: none;
 }
@@ -40,14 +48,15 @@ body {
 }
 
 .btn-link {
-  color: tomato;
+  color: whitesmoke;
   padding: 0.5rem;
+  border: 1px solid whitesmoke;
   border-radius: 5px;
   text-decoration: none;
 }
 
 .btn-link:hover {
-  background-color: rgba(255, 255, 255, 0.144);
+  background-color: rgba(0, 0, 0, 0.144);
 }
 
 .post-entry {
@@ -55,12 +64,15 @@ body {
 }
 
 .post-entry h2 {
+  font-family: "got", "Source Sans Pro", sans-serif;
   margin: 0.5rem 0;
 }
 
 .post-entry h2 a,
 .post-entry h2 a:visited {
-  color: dodgerblue;
+  font-family: "got", "Source Sans Pro", sans-serif;
+  letter-spacing: 3px;
+  color: palevioletred;
   text-decoration: none;
 }
 
