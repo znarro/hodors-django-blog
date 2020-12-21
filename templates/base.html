@@ -13,20 +13,28 @@
     <div class="wrapper">
       <header class="header full-bleed">
         <h1><a href="{% url 'home' %}">Hodor's Django blog</a></h1>
-      </header>
 
-      {% if user.is_authenticated %}
-        <p>Hi {{ user.username }}!</p> 
-        <p><a href="{% url 'logout' %}">Log out</a></p>
-      {% else %}
-        <p>You are not logged in.</p>
-        <a href="{% url 'login' %}">Log In</a> 
-      {% endif %}
-
-      <main>
         <div class="new-blog">
           <a href="{% url "post_new" %}" class="btn-link">New Blog Post</a>
         </div>
+      </header>
+
+      {% if user.is_authenticated %}
+        <div class="auth-message">
+          <p>Hi {{ user.username }}!</p> 
+          <a href="{% url 'logout' %}" class="btn-link" >Log out</a>
+        </div>
+      {% else %}
+        <div class="auth-message">
+          <p>You are not logged in.</p>
+          <div>
+            <a href="{% url 'login' %}" class="btn-link">Log In</a> 
+            <a href="{% url 'signup' %}" class="btn-link">Sign Up</a> 
+          </div>
+        </div>
+      {% endif %}
+
+      <main>
 
         <div>
           {% block content %} 
