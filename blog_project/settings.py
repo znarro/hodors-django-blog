@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Custom apps
     "blog.apps.BlogConfig",
+    "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
@@ -77,6 +78,7 @@ WSGI_APPLICATION = "blog_project.wsgi.application"
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
+    # PRODUCTION
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "df3oqodmvfpnnm",
@@ -85,6 +87,15 @@ DATABASES = {
         "USER": "bchiijnxavjhja",
         "PASSWORD": "410d1fd66b7e0e76e44fb92ee60fde0877db282ca37bddb74986934f555b6c1a",
     }
+    # DEVELOPMENT
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     "NAME": "blog",
+    #     "HOST": "localhost",
+    #     "PORT": 5432,
+    #     "USER": "josuenarro",
+    #     # "PASSWORD": "",
+    # }
 }
 
 
@@ -131,3 +142,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+LOGIN_REDIRECT_URL = "home"
+
+LOGOUT_REDIRECT_URL = "home"

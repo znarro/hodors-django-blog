@@ -46,6 +46,7 @@ class BlogTests(TestCase):
         body text, and uses the correct home.html template
         """
         response = self.client.get(reverse("home"))
+        print(response)
         self.assertEqual(response.status_code, 200)  # 200: OK
         self.assertContains(response, "Nice body content")
         self.assertTemplateUsed(response, "home.html")
