@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
 @font-face {
   font-family: "got";
   src: local("got"), url("/static/fonts/got.ttf") format("truetype");
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100vh;
+  font-family: "Inconsolata", sans-serif;
   font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.767);
+  background-color: rgba(0, 0, 0, 0.75);
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23eaeaea' fill-opacity='0.05'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   color: whitesmoke;
 }
 
@@ -17,7 +21,7 @@ body {
     1fr
     min(65ch, 100%)
     1fr;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 0;
 }
 
 .wrapper > * {
@@ -77,13 +81,14 @@ body {
 .post-entry h2 a:visited {
   font-family: "got", "Source Sans Pro", sans-serif;
   letter-spacing: 3px;
-  color: palevioletred;
+  color: rgb(211, 3, 44);
   text-decoration: none;
 }
 
 .post-entry p {
   margin: 0;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .post-entry h2 a:hover {
@@ -100,4 +105,146 @@ body {
 
 .auth-message p {
   color: goldenrod;
+}
+
+/* Footer */
+.footer {
+  color: whitesmoke;
+  position: fixed;
+  bottom: -5px;
+  right: -15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sign {
+  color: rgb(119, 0, 24);
+  transform: rotateZ(-25deg);
+  clip-path: polygon(
+    3% 0,
+    7% 1%,
+    11% 0%,
+    16% 2%,
+    20% 0,
+    23% 2%,
+    28% 2%,
+    32% 1%,
+    35% 1%,
+    39% 3%,
+    41% 1%,
+    45% 0%,
+    47% 2%,
+    50% 2%,
+    53% 0,
+    58% 2%,
+    60% 2%,
+    63% 1%,
+    65% 0%,
+    67% 2%,
+    69% 2%,
+    73% 1%,
+    76% 1%,
+    79% 0,
+    82% 1%,
+    85% 0,
+    87% 1%,
+    89% 0,
+    92% 1%,
+    96% 0,
+    98% 3%,
+    99% 3%,
+    99% 6%,
+    100% 11%,
+    98% 15%,
+    100% 21%,
+    99% 28%,
+    100% 32%,
+    99% 35%,
+    99% 40%,
+    100% 43%,
+    99% 48%,
+    100% 53%,
+    100% 57%,
+    99% 60%,
+    100% 64%,
+    100% 68%,
+    99% 72%,
+    100% 75%,
+    100% 79%,
+    99% 83%,
+    100% 86%,
+    100% 90%,
+    99% 94%,
+    99% 98%,
+    95% 99%,
+    92% 99%,
+    89% 100%,
+    86% 99%,
+    83% 100%,
+    77% 99%,
+    72% 100%,
+    66% 98%,
+    62% 100%,
+    59% 99%,
+    54% 99%,
+    49% 100%,
+    46% 98%,
+    43% 100%,
+    40% 98%,
+    38% 100%,
+    35% 99%,
+    31% 100%,
+    28% 99%,
+    25% 99%,
+    22% 100%,
+    19% 99%,
+    16% 100%,
+    13% 99%,
+    10% 99%,
+    7% 100%,
+    4% 99%,
+    2% 97%,
+    1% 97%,
+    0% 94%,
+    1% 89%,
+    0% 84%,
+    1% 81%,
+    0 76%,
+    0 71%,
+    1% 66%,
+    0% 64%,
+    0% 61%,
+    0% 59%,
+    1% 54%,
+    0% 49%,
+    1% 45%,
+    0% 40%,
+    1% 37%,
+    0% 34%,
+    1% 29%,
+    0% 23%,
+    2% 20%,
+    1% 17%,
+    1% 13%,
+    0 10%,
+    1% 6%,
+    1% 3%
+  );
+
+  background-color: #dfcd87;
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.sign a {
+  text-decoration: none;
+  color: rgb(119, 0, 24);
+  letter-spacing: 1px;
+  font-family: "got", "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sign a:hover {
+  color: crimson;
 }
