@@ -10,6 +10,7 @@ body {
   color: whitesmoke;
 }
 
+/* Layout */
 .wrapper {
   display: grid;
   grid-template-columns:
@@ -28,11 +29,13 @@ body {
   grid-column: 1 / 4;
 }
 
+/* Header */
 .header {
   border-bottom: 2px solid goldenrod;
   margin-bottom: 2rem;
   display: flex;
-  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .header h1 a {
@@ -43,22 +46,24 @@ body {
 }
 
 .new-blog {
-  display: flex;
   padding: 2rem 0;
 }
 
+/* Link */
 .btn-link {
   color: whitesmoke;
   padding: 0.5rem;
   border: 1px solid whitesmoke;
   border-radius: 5px;
   text-decoration: none;
+  margin: 0 3px;
 }
 
 .btn-link:hover {
   background-color: rgba(0, 0, 0, 0.144);
 }
 
+/* Post entry */
 .post-entry {
   margin-bottom: 2rem;
 }
@@ -83,4 +88,16 @@ body {
 
 .post-entry h2 a:hover {
   color: crimson;
+}
+
+/* Auth messages */
+.auth-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.auth-message p {
+  color: goldenrod;
 }
