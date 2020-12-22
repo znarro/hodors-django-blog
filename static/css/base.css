@@ -107,6 +107,11 @@ body {
   color: goldenrod;
 }
 
+/* Auth links */
+.auth-links {
+  display: flex;
+}
+
 /* Footer */
 .footer {
   color: whitesmoke;
